@@ -19,7 +19,7 @@ jobs:
           CIBW_BEFORE_BUILD_LINUX: "pip3 install --upgrade -r requirements.txt"
           CIBW_BEFORE_ALL_LINUX: "curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain stable -y && yum install -y openssl-devel"
           CIBW_ENVIRONMENT: 'PATH="$PATH:$HOME/.cargo/bin"'
-          CIBW_SKIP: "*-win32"
+          CIBW_SKIP: "cp27-* cp34-* cp35-* cp36-* pp* *-win32 *-musllinux*"
 
       - uses: actions/upload-artifact@v2
         with:
