@@ -22,7 +22,6 @@ jobs:
           CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
           CIBW_ARCHS_WINDOWS: "AMD64 x86"
           CIBW_BUILD_VERBOSITY: "1"
-          CIBW_BEFORE_ALL_LINUX: "curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain stable -y && yum install -y openssl-devel"
           CIBW_ENVIRONMENT: 'PATH="$PATH:$HOME/.cargo/bin"'
           CIBW_SKIP: "*-win32"
         
