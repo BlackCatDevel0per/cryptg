@@ -13,15 +13,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-
-      - uses: RalfG/python-wheels-manylinux-build@v0.4.2-manylinux2014_x86_64
-        with:
-          python-versions: 'cp36-cp36m cp37-cp37m'
-
+      
+      - name: Build wheels
+        uses: pypa/cibuildwheel@v2.3.1
+        
       - uses: actions/upload-artifact@v2
         with:
-          path: ./dist/*.whl
+          path: ./wheelhouse/*.whl
 
   build_sdist:
     name: Build source distribution
