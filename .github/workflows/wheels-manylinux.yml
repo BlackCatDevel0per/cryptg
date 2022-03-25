@@ -22,7 +22,6 @@ jobs:
           CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
           CIBW_ARCHS_WINDOWS: "AMD64 x86"
           CIBW_BUILD_VERBOSITY: "1"
-          CIBW_ENVIRONMENT: 'PATH="$PATH:$HOME/.cargo/bin"'
           CIBW_SKIP: "*-win32"
         
       - uses: actions/upload-artifact@v2
