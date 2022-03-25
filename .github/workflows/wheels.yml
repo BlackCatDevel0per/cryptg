@@ -2,7 +2,8 @@ name: wheels-def
 
 on:
   push:
-
+    tags:
+      - 'v*'
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
@@ -20,7 +21,7 @@ jobs:
           python -m pip install -r requirements.txt && python setup.py bdist_wheel
           sudo apt install patchelf
           pip install auditwheel
-          auditwheel repair --plat manylinux2010_x86_64 ./dist/*whl
+          auditwheel repair ./dist/*whl
           
       - uses: actions/upload-artifact@v2
         with:
