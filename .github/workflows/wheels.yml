@@ -20,7 +20,7 @@ jobs:
           python -m pip install -r requirements.txt && python setup.py bdist_wheel
           sudo apt install patchelf
           pip install auditwheel
-          auditwheel repair --plat manylinux2014 ./dist/*whl
+          auditwheel repair --plat manylinux2010_x86_64 ./dist/*whl
           
       - uses: actions/upload-artifact@v2
         with:
