@@ -15,8 +15,9 @@ jobs:
       - uses: actions/checkout@v2
       # Used to host cibuildwheel
       - uses: actions/setup-python@v2
-      - name: Install cibuildwheel
+      - name: Update pip & setuptools
         run: python -m pip install --upgrade pip setuptools wheel
+      - name: Install cibuildwheel
         run: python -m pip install cibuildwheel==2.3.1
 
       - name: Build wheels
