@@ -4,12 +4,3 @@ requires = [
     "setuptools>=58.1.0",
     "wheel>=0.37.0",
 ]
-
-manylinux-x86_64-image = "manylinux2010"
-manylinux-i686-image = "manylinux2010"
-manylinux-aarch64-image = "manylinux2010"
-manylinux-ppc64le-image = "manylinux2010"
-manylinux-s390x-image = "manylinux2010"
-manylinux-pypy_x86_64-image = "manylinux2010"
-manylinux-pypy_i686-image = "manylinux2010"
-manylinux-pypy_aarch64-image = "manylinux2010"
